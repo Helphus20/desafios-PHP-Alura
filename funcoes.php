@@ -1,4 +1,5 @@
 <?php
+require_once "dados.php";
 function escreva($mensagem): void
 {
     echo $mensagem . PHP_EOL;
@@ -34,4 +35,7 @@ function mostraSaldo($conta): void
 {
     echo "Seu saldo é: R$ $conta" . PHP_EOL;
 }
-
+function titularComMaiusculas(&$conta)
+{
+    $conta = strtoupper($conta);
+}
