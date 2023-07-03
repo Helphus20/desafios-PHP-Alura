@@ -35,7 +35,13 @@ function mostraSaldo($conta): void
 {
     echo "Seu saldo é: R$ $conta" . PHP_EOL;
 }
-function titularComMaiusculas(&$conta)
+function titularComMaiusculas(&$conta)// o & representa a passagem de um parâmetro por referência. Ele altera o valor da variável no endereço o qual ela está armazenada, e não altera somente a cópia desse parâmetro, o que aconteceria se n tivesse o '&'
 {
     $conta = strtoupper($conta);
+}
+
+function mostraClientes($conta){
+    foreach($conta as $cliente){
+        escreva(mensagem: PHP_EOL."$cliente[titular] saldo: $cliente[saldo]");
+    }
 }

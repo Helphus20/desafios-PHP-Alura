@@ -13,8 +13,12 @@ mostraSaldo($contasCorrentes[$numId]['saldo']);
 
 escreva(mensagem: "{$contasCorrentes[$numId]['titular']} quer fazer um saque no valor de $saque reais" . PHP_EOL);
 
+unset($contasCorrentes['123.455.678-83']);//remove um elemento da lista
+
 if (validaSaldo($saque, $contasCorrentes[$numId]['saldo']) == 1){
     saldoInsuficiente($contasCorrentes[$numId]['titular'], $contasCorrentes[$numId]['saldo']);
 }   else{
         saque($contasCorrentes[$numId]['saldo'], $saque, $contasCorrentes[$numId]['titular'], $numId, $contasCorrentes[$numId]['saldo']);
     }
+
+PHP_EOL . PHP_EOL .mostraClientes($contasCorrentes);
