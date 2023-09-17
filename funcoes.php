@@ -24,7 +24,7 @@ function saque($saldo, $saque, $nome, $numId, $conta): void
 
 function validaDeposito ($deposito)
 {
-    if($deposito < 0)
+    if($deposito < 0 || $deposito === 0)
         return 1;
 }
 function deposito($conta, $deposito)
